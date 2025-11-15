@@ -12,25 +12,34 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-              
+              <li><a href="submit.html" class="active">Submit Proposal</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
             </ul>
         </nav>
     </header>
 
-   
-        <form>
-            <h2>Login</h2>
-            <p>
-                <label for="username">Username:</label>
+   <main class="container">
+        <form id="login-form">
+            <h2>Login to Your Account</h2>
+            
+            <div id="error-message"></div>
+            
+            <div class="form-group">
+                <label for="username">Username or Email:</label>
                 <input type="text" id="username" name="username" required>
-            </p>
-            <p>
+            </div>
+            
+            <div class="form-group">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
-            </p>
+            </div>
+            
             <button type="submit">Login</button>
-        </form>
-
+            
+            <p style="text-align: center; margin-top: 20px;">
+                <a href="signup.html">Don't have an account? Sign up here</a>
+            </p>
+   </main>
 
     <footer>
         <p>&copy; 2025 CPIS-358 Group Project</p>

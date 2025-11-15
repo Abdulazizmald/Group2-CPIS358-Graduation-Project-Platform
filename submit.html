@@ -25,31 +25,51 @@
         
 
         <!-- Proposal Form -->
-        <form>
-            <h2>New Proposal</h2>
+        <main class="container">
+        <form id="proposal-form">
+            <h2>New Project Proposal</h2>
 
-<p>
-<label for="prop-studentname1">Student 1 Name:</label>
-<input type="text" id="prop-student2" name="prop-student">
-</p>
+            <div class="form-group">
+                <label for="prop-student1">Student 1 Name:</label>
+                <input type="text" id="prop-student1" name="prop-student1" required>
+            </div>
 
-<p>
-<label for="prop-studentname2">Student 2 Name:</label>
-<input type="text" id="prop-student2" name="prop-student2">
-</p>
+            <div class="form-group">
+                <label for="prop-student2">Student 2 Name (Optional):</label>
+                <input type="text" id="prop-student2" name="prop-student2">
+            </div>
 
-
-            <p>
+            <div class="form-group">
                 <label for="proj-title">Project Title:</label>
                 <input type="text" id="proj-title" name="proj-title" required>
-            </p>
-            <p>
+            </div>
+            
+            <div class="form-group">
+                <label for="proj-category">Category:</label>
+                <select id="proj-category" name="proj-category" required>
+                    <option value="">Select a category</option>
+                    <option value="web">Web Application</option>
+                    <option value="mobile">Mobile Application</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="iot">Internet of Things</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label for="proj-desc">Project Description:</label>
-            </br>
-                <textarea id="proj-desc" name="proj-desc" rows="5" required></textarea>
-            </p>
+                <textarea id="proj-desc" name="proj-desc" rows="6" required placeholder="Describe your project idea, objectives, and key features..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="proj-tech">Technologies Used:</label>
+                <input type="text" id="proj-tech" name="proj-tech" placeholder="e.g., React, Node.js, Python, TensorFlow">
+            </div>
+            
             <button type="submit">Submit for Review</button>
         </form>
+    </main>
     
 
     <footer>

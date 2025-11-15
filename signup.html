@@ -12,39 +12,53 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-
+                <li><a href="submit.html" class="active">Submit Proposal</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
             </ul>
         </nav>
     </header>
 
-     <form id="signup-form">
-            <h2>Sign Up</h2>
+     
+    <main class="container">
+        <form id="signup-form">
+            <h2>Create Your Account</h2>
     
             <div id="error-message"></div>
             
-            <p>
+            <div class="form-group">
                 <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname">
-            </p>
+                <input type="text" id="fname" name="fname" required>
+            </div>
             
-            <p>
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname">
-            </p>
+            <div class="form-group">
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lname" required>
+            </div>
 
-            <p>
+            <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-            </p>
+                <input type="email" id="email" name="email" required>
+            </div>
             
-            <p>
+            <div class="form-group">
                 <label for="pwd">Password:</label>
-                <input type="password" id="pwd" name="pwd">
-            </p>
+                <input type="password" id="pwd" name="pwd" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-pwd">Confirm Password:</label>
+                <input type="password" id="confirm-pwd" name="confirm-pwd" required>
+            </div>
            
             <button type="submit">Sign Up</button>
+            
+            <p style="text-align: center; margin-top: 20px;">
+                <a href="login.html">Already have an account? Login here</a>
+            </p>
         </form>
+    </main>
 
+    
         <footer>
         <p>&copy; 2025 CPIS-358 Group Project</p>
     </footer>
