@@ -84,9 +84,57 @@ function setupLogin() {
         };
     }
 }
+
+function setupProposalForm() {
+    var form = document.getElementById("proposal-form");
+    if (form) {
+        form.onsubmit = function(event) {
+            event.preventDefault(); // Stop the form from submitting
+
+            // Get form values
+            var student1 = document.getElementById("prop-student1").value;
+            var title = document.getElementById("proj-title").value;
+            var category = document.getElementById("proj-category").value;
+            var description = document.getElementById("proj-desc").value;
+
+            // Validation checks
+            if (student1 === "") {
+                window.alert("Student 1 Name must be filled out");
+                return false;
+            }
+            if (title === "") {
+                window.alert("Project Title must be filled out");
+                return false;
+            }
+            if (category === "") {
+                window.alert("Please select a project category");
+                return false;
+            }
+            if (description === "") {
+                window.alert("Project Description must be filled out");
+                return false;
+            }
+
+            
+            window.alert("Proposal submitted successfully for review!");
+            form.reset();
+            
+            // Redirect back to home page after 1 second
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 1000);
+            
+            return false;
+        };
+    }
+}
+
     if (document.getElementById("signup-form")) {
         setupSignup();
     } else if (document.getElementById("login-form")) {
         setupLogin();
     }
+    else if (document.getElementById("proposal-form")) {
+    setupProposalForm(); 
+}
 
